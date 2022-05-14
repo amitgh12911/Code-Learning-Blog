@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blue-btn: #1a74e8;
+    --bg-color: rgb(62, 68, 62)
+}
+
+.navbar {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 0 2vw;
+    transition: all 0.5s linear;
+}
+
+.navbar img {
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    width: 47vw;
+}
+
+.navbar ul li {
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+}
+
+.navbar ul li a:hover {
+    color: var(--blue-btn);
+}
+
+.navbar form input {
+    font-size: 17px;
+    border-radius: 20px;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+}
+
+.navbar form input[placeholder] {
+    width: 185px;
+    height: 28px;
+}
+
+.navbar form input[value] {
+    cursor: pointer;
+    padding: 4px 15px;
+    transition: all 0.2s linear;
+}
+
+.navbar form input[value]:hover {
+    background-color: var(--blue-btn);
+    color: white;
+}
+
+.hamburger {
+    display: none;
+}
+
+.container {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.container img {
+    width: 50%;
+}
+
+.container p {
+    text-align: center;
+    width: 50%;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 417px;
+    margin: 15px 0;
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 8.7px;
+    border-top-right-radius: 8.7px;
+}
+
+.btn {
+    font-size: 21px;
+    background-color: var(--blue-btn);
+    color: white;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.btn:hover {
+    color: black;
+}
+
+.about {
+    margin: 15px;
+}
+
+.about h2 {
+    text-align: center;
+}
+
+.about .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.about .info p {
+    text-align: center;
+}
+
+.about .reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+section h1 {
+    text-align: center;
+}
+
+section form {
+    text-align: center;
+}
+
+section form div {
+    margin: 10px 0;
+}
+
+section form div input[type="email"],
+section form div input[type="tel"],
+section form div input[type="text"] {
+    width: 80vw;
+    height: 30px;
+    border: 2px solid green;
+    border-radius: 10px;
+    outline: none;
+}
+
+section form div input[type="email"]:hover,
+section form div input[type="tel"]:hover,
+section form div input[type="text"]:hover {
+    border-color: red;
+}
+
+section form div input[type="radio"] {
+    margin-right: 10px;
+}
+
+footer {
+    background-color: var(--bg-color);
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+}
+
+@media screen and (max-width: 680px) {
+    .navbar {
+        flex-direction: column;
+        height: 63px;
+        justify-content: space-evenly;
+        align-items: baseline;
+        overflow: hidden;
+    }
+
+    .navbar img {
+        position: absolute;
+        top: 10px;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 30px;
+    }
+
+    .navbar ul li:nth-child(1) {
+        position: absolute;
+        top: 32px;
+    }
+
+    .navbar ul li:nth-child(2) {
+        position: absolute;
+        top: 66px;
+    }
+
+    .navbar ul li:nth-child(3) {
+        position: absolute;
+        top: 100px;
+    }
+
+    .navbar form {
+        position: absolute;
+        top: 168px;
+    }
+
+    .navbar form input:last-child {
+        position: absolute;
+        left: 0;
+        top: 35px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: 2px solid white;
+        height: 37px;
+        width: 37px;
+        border-radius: 10px;
+    }
+
+    .lines {
+        border: 1px solid white;
+        height: 0;
+        width: 80%;
+    }
+
+    .container h2 {
+        font-size: large;
+    }
+
+    .about .info {
+        flex-direction: column;
+    }
+
+    section form .con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
